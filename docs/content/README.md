@@ -32,3 +32,5 @@ On 15 October 2026, the shared participant login was verified through the normal
 ## Creator and administrator verification
 
 The dedicated creator and administrator accounts signed in successfully using their private review credentials. The creator submitted JDBC essentials with four questions and explanations. The administrator inspected its answer keys and published it through the approval screen. Source content is recorded in jdbc-essentials.json. Privileged login credentials are intentionally absent from this repository.
+
+The participant then started the newly approved JDBC quiz and submitted four correct answers. Its live performance report showed 4/4 (100%), confirming the creation, approval and participation workflow across all three roles.

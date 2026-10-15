@@ -10,13 +10,15 @@ Team name:
 
 Review documents: [rubric evidence](docs/REVIEW-1.md), [architecture and database design](docs/ARCHITECTURE.md), [demo and viva](docs/DEMO-AND-VIVA.md), [hosting](docs/DEPLOYMENT.md).
 
+Live application: https://quiznova-muskanbuilds11.onrender.com
+
 Repository: https://github.com/muskanbuilds11/java-online-quiz-platform
 
 [Review presentation](docs/presentation/QuizNova-Review-1.pptx) · [PDF copy](docs/presentation/QuizNova-Review-1.pdf) · [Automated checks](https://github.com/muskanbuilds11/java-online-quiz-platform/actions)
 
 ![Participant workspace](docs/screenshots/participant-desktop.jpg)
 
-A complete local Java quiz application with three role-based workspaces, a custom warm ivory / forest green interface, and an interactive WebGL 3D coffee-cup scene. All frontend assets, including Three.js, are served locally.
+A Java quiz application with three role-based workspaces, a custom warm ivory / forest green interface, and an interactive WebGL 3D coffee-cup scene. All frontend assets, including Three.js, are served locally.
 
 ## Run on Windows
 
@@ -34,7 +36,7 @@ Open **http://localhost:8080**. Keep the terminal running; press Ctrl+C to stop.
 
 The first Maven build needs internet access to download Java dependencies. After packaging, the JAR runs without Node.js or an internet connection.
 
-## Demo accounts
+## Local demo accounts
 
 The first launch seeds a clearly demonstrative workspace: eight quizzes, sample attempts, a conversation, and a reminder. It does not overwrite existing database records.
 

@@ -23,3 +23,7 @@ Each correct answer earns one point. Wrong and unanswered questions earn zero, w
 The import runs in one transaction and locks the settings row to serialize simultaneous imports. Its versioned review-note markers prevent duplicate insertion when the unchanged import is run again. It does not alter existing accounts, passwords, attempts or quizzes. Preserve those markers if you need to repeat the import. Content changes should follow the application's normal quiz lifecycle after participants have attempted a quiz.
 
 Only question content was imported into the hosted database. Local sample people, scores, messages and reminders were not uploaded.
+
+## Live verification
+
+On 15 October 2026, the shared participant login was verified through the normal sign-in form. All six quizzes were visible. A Java foundations attempt restored its timer and two saved answers after refresh. Four correct answers, one wrong choice and one unanswered question produced 4/6 (67%) with a pass at the configured 60% threshold. The explanations and native servlet text-report download were verified. This is a real verification attempt in the shared demo account, not a fabricated performance record.

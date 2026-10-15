@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.jpg binary
+*.png binary
+*.pptx binary
+*.pdf binary
+# Keep bundled third-party source formatting intact.
+src/main/resources/static/vendor/** -whitespace

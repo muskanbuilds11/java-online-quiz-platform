@@ -1,0 +1,14 @@
+target/
+data/
+work/
+*.log
+.idea/
+.vscode/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.mv.db
+*.trace.db

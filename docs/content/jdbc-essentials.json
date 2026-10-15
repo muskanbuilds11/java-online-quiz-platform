@@ -1,0 +1,33 @@
+{
+  "title": "JDBC essentials",
+  "description": "Practice prepared statements, transaction boundaries and resource handling in a Java database application.",
+  "topic": "JDBC",
+  "difficulty": "Beginner",
+  "durationMinutes": 5,
+  "questions": [
+    {
+      "prompt": "How should user input be supplied to a PreparedStatement?",
+      "options": ["Concatenate it into the SQL text", "Bind it with parameter setter methods", "Append it after executeQuery()", "Put it in a SQL comment"],
+      "correctIndex": 1,
+      "explanation": "PreparedStatement setter methods bind data to parameter placeholders. User input should not be concatenated into the SQL structure."
+    },
+    {
+      "prompt": "Which call starts manual transaction control on a JDBC Connection?",
+      "options": ["connection.setAutoCommit(false)", "connection.close()", "resultSet.next()", "statement.clearParameters()"],
+      "correctIndex": 0,
+      "explanation": "Disabling auto-commit lets the application group statements and explicitly call commit() or rollback() on the connection."
+    },
+    {
+      "prompt": "What does ResultSet.next() do?",
+      "options": ["Commits the current transaction", "Creates a new database table", "Advances the cursor and reports whether a row is available", "Closes the database connection"],
+      "correctIndex": 2,
+      "explanation": "The cursor begins before the first row. next() advances it and returns true if the new current row exists, or false when there are no more rows."
+    },
+    {
+      "prompt": "Which Java construct closes JDBC resources automatically when its block exits?",
+      "options": ["A switch expression", "A static import", "A synchronized method alone", "A try-with-resources statement"],
+      "correctIndex": 3,
+      "explanation": "Connection, Statement and ResultSet implement AutoCloseable. try-with-resources invokes close() as the block exits, including exceptional exits."
+    }
+  ]
+}

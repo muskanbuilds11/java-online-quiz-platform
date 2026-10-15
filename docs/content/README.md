@@ -1,6 +1,6 @@
 # Java starter library
 
-The live QuizNova site contains six approved Java quizzes with 36 questions. Each quiz has six four-option questions, a correct answer and an explanation.
+The starter library contributes six approved Java quizzes with 36 questions. A further JDBC essentials quiz was created by the live Quiz Creator account and approved by the live Administrator account, bringing the hosted total to seven quizzes and 40 questions. Each quiz has six four-option questions, a correct answer and an explanation.
 
 | Quiz | Topic | Duration |
 | --- | --- | --- |
@@ -27,3 +27,8 @@ Only question content was imported into the hosted database. Local sample people
 ## Live verification
 
 On 15 October 2026, the shared participant login was verified through the normal sign-in form. All six quizzes were visible. A Java foundations attempt restored its timer and two saved answers after refresh. Four correct answers, one wrong choice and one unanswered question produced 4/6 (67%) with a pass at the configured 60% threshold. The explanations and native servlet text-report download were verified. This is a real verification attempt in the shared demo account, not a fabricated performance record.
+
+
+## Creator and administrator verification
+
+The dedicated creator and administrator accounts signed in successfully using their private review credentials. The creator submitted JDBC essentials with four questions and explanations. The administrator inspected its answer keys and published it through the approval screen. Source content is recorded in jdbc-essentials.json. Privileged login credentials are intentionally absent from this repository.

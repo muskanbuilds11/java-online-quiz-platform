@@ -176,7 +176,7 @@ The internal Java package, JAR artifact and local database filename retain `quiz
 
 QuizNova is deployed at https://quiznova-muskanbuilds11.onrender.com using Render Free and Neon PostgreSQL in Singapore. HTTPS, real administrator sign-in and cloud user management were verified on 15 October 2026. Free instances sleep after inactivity, so allow 50 seconds or more for a cold start.
 
-The cloud profile disables local demo accounts and content. Participants register first. The privately configured administrator creates quiz creators through User management. The Dockerfile and `render.yaml` document the configuration for another deployment. Set `SPRING_PROFILES_ACTIVE=cloud`, the `DATABASE_*` values, and private `ADMIN_*` credentials. See the deployment guide for full steps.
+The cloud profile disables local demo accounts. Six approved Java quizzes (36 questions) are published for reviewers, with the source bank and repeatable PostgreSQL import in [docs/content](docs/content/README.md). Participants register first. The privately configured administrator creates quiz creators through User management. The Dockerfile and `render.yaml` document the configuration for another deployment. Set `SPRING_PROFILES_ACTIVE=cloud`, the `DATABASE_*` values, and private `ADMIN_*` credentials. See the deployment guide for full steps.
 
 ## Scope
 

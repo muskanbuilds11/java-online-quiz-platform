@@ -1,0 +1,452 @@
+[
+  {
+    "title": "Java foundations",
+    "description": "A good foundation changes everything. Test your instincts on types, operators, strings, and the JVM.",
+    "topic": "Core Java",
+    "difficulty": "Beginner",
+    "durationMinutes": 10,
+    "questions": [
+      {
+        "prompt": "Which component executes Java bytecode?",
+        "options": [
+          "JDK compiler",
+          "JVM",
+          "Text editor",
+          "Source loader"
+        ],
+        "correctIndex": 1,
+        "explanation": "The Java Virtual Machine executes bytecode. javac compiles source into bytecode."
+      },
+      {
+        "prompt": "What is the default value of an instance variable of type boolean?",
+        "options": [
+          "true",
+          "null",
+          "false",
+          "undefined"
+        ],
+        "correctIndex": 2,
+        "explanation": "A boolean instance field defaults to false. Local variables must be initialized before use."
+      },
+      {
+        "prompt": "Which keyword prevents a variable from being reassigned?",
+        "options": [
+          "static",
+          "private",
+          "final",
+          "abstract"
+        ],
+        "correctIndex": 2,
+        "explanation": "A final variable can be assigned only once. A referenced object may still be mutable."
+      },
+      {
+        "prompt": "What does System.out.println(5 / 2) print?",
+        "options": [
+          "2.5",
+          "2",
+          "3",
+          "Compilation error"
+        ],
+        "correctIndex": 1,
+        "explanation": "Both operands are integers, so integer division discards the fractional part."
+      },
+      {
+        "prompt": "Which method compares the contents of two strings?",
+        "options": [
+          "==",
+          "compareReference()",
+          "equals()",
+          "same()"
+        ],
+        "correctIndex": 2,
+        "explanation": "String.equals compares character content. == checks whether references point to the same object."
+      },
+      {
+        "prompt": "Which is a valid Java entry point?",
+        "options": [
+          "public void main()",
+          "public static void main(String[] args)",
+          "static int start(String args)",
+          "private static main()"
+        ],
+        "correctIndex": 1,
+        "explanation": "The standard Java 17 entry point is public static void main(String[] args)."
+      }
+    ]
+  },
+  {
+    "title": "Think in objects",
+    "description": "Go beyond syntax. Explore inheritance, polymorphism, encapsulation, and the choices behind good Java design.",
+    "topic": "Object-oriented programming",
+    "difficulty": "Intermediate",
+    "durationMinutes": 15,
+    "questions": [
+      {
+        "prompt": "Which principle hides internal state behind a public interface?",
+        "options": [
+          "Inheritance",
+          "Encapsulation",
+          "Recursion",
+          "Compilation"
+        ],
+        "correctIndex": 1,
+        "explanation": "Encapsulation keeps implementation details and state behind a controlled interface."
+      },
+      {
+        "prompt": "Which keyword calls a superclass constructor?",
+        "options": [
+          "this",
+          "parent",
+          "super",
+          "extends"
+        ],
+        "correctIndex": 2,
+        "explanation": "super(...) invokes a constructor of the direct superclass."
+      },
+      {
+        "prompt": "Method overriding is resolved primarily at which stage?",
+        "options": [
+          "Compile time only",
+          "Runtime",
+          "Installation",
+          "Source formatting"
+        ],
+        "correctIndex": 1,
+        "explanation": "For instance methods, runtime dispatch chooses the implementation based on the object's actual class."
+      },
+      {
+        "prompt": "Can a Java class extend more than one class directly?",
+        "options": [
+          "Yes, always",
+          "Only abstract classes",
+          "Only final classes",
+          "No"
+        ],
+        "correctIndex": 3,
+        "explanation": "Java classes have single class inheritance but may implement multiple interfaces."
+      },
+      {
+        "prompt": "Which modifier prevents a class from being subclassed?",
+        "options": [
+          "static",
+          "protected",
+          "final",
+          "transient"
+        ],
+        "correctIndex": 2,
+        "explanation": "A final class cannot be extended."
+      },
+      {
+        "prompt": "An abstract class can contain which of these?",
+        "options": [
+          "Only abstract methods",
+          "Only static fields",
+          "Both concrete and abstract methods",
+          "No constructors"
+        ],
+        "correctIndex": 2,
+        "explanation": "Abstract classes can define state, constructors, concrete methods, and abstract methods."
+      }
+    ]
+  },
+  {
+    "title": "Collections, decoded",
+    "description": "Choose the right collection for the job. Lists, sets, maps, equality, and a few surprises along the way.",
+    "topic": "Collections",
+    "difficulty": "Intermediate",
+    "durationMinutes": 12,
+    "questions": [
+      {
+        "prompt": "Which collection guarantees unique elements?",
+        "options": [
+          "List",
+          "Set",
+          "Queue",
+          "Array"
+        ],
+        "correctIndex": 1,
+        "explanation": "Set models a collection without duplicate elements according to its equality rules."
+      },
+      {
+        "prompt": "Which Map preserves insertion order by default?",
+        "options": [
+          "HashMap",
+          "TreeMap",
+          "LinkedHashMap",
+          "IdentityHashMap"
+        ],
+        "correctIndex": 2,
+        "explanation": "LinkedHashMap maintains insertion order by default, or access order when explicitly configured."
+      },
+      {
+        "prompt": "Average get-by-index time complexity for ArrayList is?",
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(nÂ²)"
+        ],
+        "correctIndex": 0,
+        "explanation": "ArrayList uses a backing array and supports constant-time indexed access."
+      },
+      {
+        "prompt": "What must be consistent with equals() for hash collections?",
+        "options": [
+          "toString()",
+          "hashCode()",
+          "clone()",
+          "finalize()"
+        ],
+        "correctIndex": 1,
+        "explanation": "Equal objects must have the same hash code for hash-based collections to behave correctly."
+      },
+      {
+        "prompt": "Which collection orders elements using natural ordering by default?",
+        "options": [
+          "HashSet",
+          "LinkedHashSet",
+          "TreeSet",
+          "ArrayDeque"
+        ],
+        "correctIndex": 2,
+        "explanation": "TreeSet uses natural ordering unless a Comparator is supplied."
+      },
+      {
+        "prompt": "Which queue operation returns null if the queue is empty?",
+        "options": [
+          "remove()",
+          "element()",
+          "poll()",
+          "get()"
+        ],
+        "correctIndex": 2,
+        "explanation": "poll() returns null for an empty queue; remove() throws NoSuchElementException."
+      }
+    ]
+  },
+  {
+    "title": "Handle the unexpected",
+    "description": "Write resilient Java. Practice exception flow, resource management, and choosing the right recovery strategy.",
+    "topic": "Exception handling",
+    "difficulty": "Beginner",
+    "durationMinutes": 10,
+    "questions": [
+      {
+        "prompt": "Which block is intended for cleanup after a try block?",
+        "options": [
+          "catch",
+          "finally",
+          "throw",
+          "extends"
+        ],
+        "correctIndex": 1,
+        "explanation": "finally normally runs after try/catch, making it useful for cleanup. JVM termination can prevent it."
+      },
+      {
+        "prompt": "Which is a checked exception?",
+        "options": [
+          "NullPointerException",
+          "IllegalArgumentException",
+          "IOException",
+          "ArithmeticException"
+        ],
+        "correctIndex": 2,
+        "explanation": "IOException is checked and must be caught or declared."
+      },
+      {
+        "prompt": "Which interface enables try-with-resources?",
+        "options": [
+          "Runnable",
+          "Serializable",
+          "AutoCloseable",
+          "Comparable"
+        ],
+        "correctIndex": 2,
+        "explanation": "Resources in try-with-resources implement AutoCloseable so close() is called automatically."
+      },
+      {
+        "prompt": "Which keyword explicitly raises an exception?",
+        "options": [
+          "throws",
+          "throw",
+          "catch",
+          "raise"
+        ],
+        "correctIndex": 1,
+        "explanation": "throw raises an exception instance. throws declares exceptions in a method signature."
+      },
+      {
+        "prompt": "What is the superclass of all exceptions and errors?",
+        "options": [
+          "ObjectException",
+          "RuntimeException",
+          "Throwable",
+          "Exception"
+        ],
+        "correctIndex": 2,
+        "explanation": "Throwable is the common superclass of Exception and Error."
+      },
+      {
+        "prompt": "How should multiple catch blocks be ordered?",
+        "options": [
+          "General before specific",
+          "Specific before general",
+          "Alphabetically",
+          "Order never matters"
+        ],
+        "correctIndex": 1,
+        "explanation": "More specific exceptions must come before broader catches to avoid unreachable catch blocks."
+      }
+    ]
+  },
+  {
+    "title": "Streams & lambdas",
+    "description": "Find your flow with functional interfaces, stream pipelines, transformations, and lazy evaluation.",
+    "topic": "Streams & lambdas",
+    "difficulty": "Advanced",
+    "durationMinutes": 20,
+    "questions": [
+      {
+        "prompt": "Which stream operation is terminal?",
+        "options": [
+          "filter()",
+          "map()",
+          "count()",
+          "peek()"
+        ],
+        "correctIndex": 2,
+        "explanation": "count() produces a result and terminates the stream pipeline."
+      },
+      {
+        "prompt": "A functional interface has how many abstract methods?",
+        "options": [
+          "Zero",
+          "Exactly one",
+          "Exactly two",
+          "Any number"
+        ],
+        "correctIndex": 1,
+        "explanation": "A functional interface has one abstract method, excluding qualifying Object methods. Default and static methods are allowed."
+      },
+      {
+        "prompt": "Which operation transforms each stream element?",
+        "options": [
+          "filter()",
+          "map()",
+          "sorted()",
+          "distinct()"
+        ],
+        "correctIndex": 1,
+        "explanation": "map() transforms elements; filter() selects elements based on a predicate."
+      },
+      {
+        "prompt": "What happens if you reuse a stream after a terminal operation?",
+        "options": [
+          "It restarts",
+          "It returns cached results",
+          "It may throw IllegalStateException",
+          "It becomes parallel"
+        ],
+        "correctIndex": 2,
+        "explanation": "Streams are single-use. A detected reuse after consumption throws IllegalStateException."
+      },
+      {
+        "prompt": "Which operation flattens nested streams?",
+        "options": [
+          "map()",
+          "flatMap()",
+          "reduce()",
+          "limit()"
+        ],
+        "correctIndex": 1,
+        "explanation": "flatMap() maps each element to a stream and flattens the resulting streams."
+      },
+      {
+        "prompt": "When are intermediate stream operations generally executed?",
+        "options": [
+          "Immediately when declared",
+          "When a terminal operation runs",
+          "At compilation",
+          "Before the source is created"
+        ],
+        "correctIndex": 1,
+        "explanation": "Intermediate operations are lazy; terminal operations trigger processing."
+      }
+    ]
+  },
+  {
+    "title": "Concurrency workshop",
+    "description": "Threads, shared state, and execution. Put your understanding of concurrent Java to the test.",
+    "topic": "Concurrency",
+    "difficulty": "Advanced",
+    "durationMinutes": 20,
+    "questions": [
+      {
+        "prompt": "Which method starts a new thread of execution?",
+        "options": [
+          "run()",
+          "start()",
+          "executeNow()",
+          "launch()"
+        ],
+        "correctIndex": 1,
+        "explanation": "Thread.start() starts a new thread that calls run(). Calling run() directly stays on the current thread."
+      },
+      {
+        "prompt": "What does synchronized primarily provide?",
+        "options": [
+          "Guaranteed fairness",
+          "Mutual exclusion and visibility",
+          "Immutable objects",
+          "Automatic parallelism"
+        ],
+        "correctIndex": 1,
+        "explanation": "Synchronized blocks provide mutual exclusion and establish memory visibility through monitor happens-before rules."
+      },
+      {
+        "prompt": "Which class supports atomic integer increments?",
+        "options": [
+          "Integer",
+          "AtomicInteger",
+          "BigInteger",
+          "MutableInt"
+        ],
+        "correctIndex": 1,
+        "explanation": "AtomicInteger supports operations like incrementAndGet() with atomic semantics."
+      },
+      {
+        "prompt": "Which service manages pools of worker threads?",
+        "options": [
+          "StreamService",
+          "ExecutorService",
+          "ThreadManager",
+          "ClassLoader"
+        ],
+        "correctIndex": 1,
+        "explanation": "ExecutorService manages task execution and lifecycle, often through a thread pool."
+      },
+      {
+        "prompt": "Does volatile make count++ atomic?",
+        "options": [
+          "Yes",
+          "Only with two threads",
+          "No",
+          "Only on long values"
+        ],
+        "correctIndex": 2,
+        "explanation": "Volatile provides visibility and ordering. count++ is a read-modify-write operation and is not made atomic."
+      },
+      {
+        "prompt": "What does Future.get() do before the result is ready?",
+        "options": [
+          "Returns null immediately",
+          "Blocks until completion or failure",
+          "Cancels the task",
+          "Starts a new task"
+        ],
+        "correctIndex": 1,
+        "explanation": "Future.get() waits for task completion and returns its result or throws an exception."
+      }
+    ]
+  }
+]

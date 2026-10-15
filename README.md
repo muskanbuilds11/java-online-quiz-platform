@@ -174,11 +174,13 @@ The internal Java package, JAR artifact and local database filename retain `quiz
 
 ## Cloud deployment
 
-The Dockerfile and `render.yaml` prepare a free Render web service with external PostgreSQL. Set `SPRING_PROFILES_ACTIVE=cloud`, the `DATABASE_*` values, and private `ADMIN_*` credentials. The cloud profile disables demo accounts, uses secure cookies behind HTTPS, and requires PostgreSQL. See the deployment guide for full steps. A local server and a prepared repository do not constitute a live hosted deployment.
+QuizNova is deployed at https://quiznova-muskanbuilds11.onrender.com using Render Free and Neon PostgreSQL in Singapore. HTTPS, real administrator sign-in and cloud user management were verified on 15 October 2026. Free instances sleep after inactivity, so allow 50 seconds or more for a cold start.
+
+The cloud profile disables local demo accounts and content. Participants register first. The privately configured administrator creates quiz creators through User management. The Dockerfile and `render.yaml` document the configuration for another deployment. Set `SPRING_PROFILES_ACTIVE=cloud`, the `DATABASE_*` values, and private `ADMIN_*` credentials. See the deployment guide for full steps.
 
 ## Scope
 
-Reminders and messages are internal to QuizNova; email delivery, push notifications, code execution, essay grading, and password recovery email are not included. The application is configured as a local project. The cloud profile supplies HTTPS-proxy/session settings; actual hosting requires provider accounts and a private persistent database connection.
+Reminders and messages are internal to QuizNova; email delivery, push notifications, code execution, essay grading, and password recovery email are not included. The application supports local H2 and hosted PostgreSQL. Render and Neon free plans have usage limits and cold starts.
 
 Three.js is MIT licensed; its license is included under `src/main/resources/static/vendor/THREE-LICENSE.txt`.
 

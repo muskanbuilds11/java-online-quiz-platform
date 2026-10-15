@@ -40,6 +40,6 @@ Free hosting has cold starts and provider quotas. It is suitable for a project d
 
 Live URL: https://quiznova-muskanbuilds11.onrender.com
 
-Deployed on 15 October 2026 using Render Free (Docker) and Neon PostgreSQL in Singapore. HTTPS and application startup were verified. Cloud starts with a privately configured administrator. Local sample accounts and quizzes are disabled. Participants register their own accounts, and an administrator creates quiz creators through User management. Keep the real admin password private.
+Deployed on 15 October 2026 using Render Free (Docker) and Neon PostgreSQL in Singapore. HTTPS, application startup, real administrator sign-in and cloud user management were verified. Cloud starts with a privately configured administrator. Local sample accounts and quizzes are disabled. Participants register their own accounts, and an administrator creates quiz creators through User management. Keep the real admin password private.
 
 The repository was connected as a public Git URL. For application code updates, use Render Manual Deploy and deploy the latest main commit. The live database is external to the web container.

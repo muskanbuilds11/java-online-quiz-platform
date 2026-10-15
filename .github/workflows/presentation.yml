@@ -1,0 +1,27 @@
+name: Render review presentation
+on:
+  push:
+    paths: ["docs/presentation/*.pptx", ".github/workflows/presentation.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install document renderer
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libreoffice-impress poppler-utils fonts-liberation
+      - name: Export PDF and slide previews
+        run: |
+          mkdir -p review-render
+          libreoffice -env:UserInstallation=file:///tmp/quiznova-lo --headless --convert-to pdf --outdir review-render docs/presentation/QuizNova-Review-1.pptx
+          pdfinfo review-render/QuizNova-Review-1.pdf
+          pdftoppm -scale-to-x 1280 -scale-to-y 720 -png review-render/QuizNova-Review-1.pdf review-render/slide
+      - uses: actions/upload-artifact@v4
+        with:
+          name: review-presentation
+          path: review-render/
+          retention-days: 7

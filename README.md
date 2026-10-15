@@ -12,6 +12,9 @@ Review documents: [rubric evidence](docs/REVIEW-1.md), [architecture and databas
 
 Repository: https://github.com/muskanbuilds11/java-online-quiz-platform
 
+[Review presentation](docs/presentation/QuizNova-Review-1.pptx) · [PDF copy](docs/presentation/QuizNova-Review-1.pdf) · [Automated checks](https://github.com/muskanbuilds11/java-online-quiz-platform/actions)
+
+![Participant workspace](docs/screenshots/participant-desktop.jpg)
 
 A complete local Java quiz application with three role-based workspaces, a custom warm ivory / forest green interface, and an interactive WebGL 3D coffee-cup scene. All frontend assets, including Three.js, are served locally.
 
@@ -114,13 +117,13 @@ Browser (HTML / CSS / JavaScript / Three.js)
                  |
        Spring Security + CSRF
                  |
-           ApiController
+      ApiController / ReportServlet
                  |
           PlatformService
                  |
-           Spring JDBC
+       JdbcStore / Spring JDBC
                  |
-      Persistent H2 database
+       H2 / PostgreSQL database
 ```
 
 Source layout:
@@ -131,6 +134,12 @@ src/main/java/com/quizcraft/
   SecurityConfig.java       Authentication and request security
   ApiController.java        Validated API contracts and errors
   PlatformService.java      Roles, business rules, persistence, quiz timer
+  JdbcStore.java            Prepared JDBC access and row mapping
+  QuizScore.java            Immutable scoring model
+  ScoringPolicy.java        Scoring interface and MCQ implementation
+  ReportFormatter.java      Generic report contract and text formatter
+  PerformanceReportServlet.java  Authorized report download
+  AdminBootstrap.java       Initial private administrator setup
   DemoData.java             First-launch demonstration records
 src/main/resources/
   application.properties    Runtime settings
@@ -138,6 +147,9 @@ src/main/resources/
   static/                   Interface and bundled 3D library
 src/test/java/com/quizcraft/
   PlatformIntegrationTest.java
+  ReportServletIntegrationTest.java
+  QuizScoreTest.java
+  AdminBootstrapTest.java
 ```
 
 ## Verification
@@ -146,7 +158,7 @@ src/test/java/com/quizcraft/
 mvn verify
 ```
 
-The 14 integration tests exercise real registration and form login, duplicate-email rejection, password hashing, isolated new-user history, profile editing, password changes, multi-session revocation, administrator resets/deactivation, logout, CSRF, role and ownership permissions, publication workflow, answer secrecy, automatic grading, repeated submissions, expiry and late answers, attempt limits, immutable published attempts, manual reviews, private messages, reminders, maintenance mode, and registration role safety.
+The 21 tests cover authentication, role/ownership permissions, publication, scoring, expiry, concurrent starts, manual reviews, messages, reminders, secure admin bootstrap and the native servlet over real HTTP. The platform integration suite also runs against PostgreSQL 17 in GitHub Actions. Both H2 and PostgreSQL jobs have passed.
 
 ## Core Java and servlet evidence
 
